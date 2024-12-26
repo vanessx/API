@@ -32,11 +32,11 @@
           <%= recipe.ingredients.salsa.name %>
 
         </li>
-        <% for (topping of recipe.ingredients.toppings) { %>
+        <% recipe.ingredients.toppings.forEach(topping=> { %>
           <li>
             <%= topping.quantity %> of <%= topping.name %>
           </li>
-          <% } %>
+          <% }) %>
       </ul>
 
       <%} else {%>
